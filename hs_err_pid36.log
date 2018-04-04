@@ -1,0 +1,148 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000000826ba36, pid=36, tid=0x0000000000000025
+#
+# JRE version:  (8.0_112-b21) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.112-b21 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x26ba36]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000004ef800):  JavaThread "Unknown thread" [_thread_in_vm, id=37, stack(0x0000000000140000,0x0000000000240000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000006, RBX=0x0000000002100800, RCX=0x00000000cafebabe, RDX=0x0000000000000000
+RSP=0x000000000023f440, RBP=0x00000000087be0d0, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x000000000884047b, R9 =0x000000000023f5e0, R10=0x0000000000000002, R11=0x000000000023f750
+R12=0x00000000000003d8, R13=0x000000007b873ff0, R14=0x00007fffff7e8000, R15=0x00007ffc74bcb670
+RIP=0x000000000826ba36, EFLAGS=0x0000000000210246
+
+Top of Stack: (sp=0x000000000023f440)
+0x000000000023f440:   00000080ffffffff 00000000085a4e28
+0x000000000023f450:   000000000023f7a0 0000000008278e85
+0x000000000023f460:   00000000004efd90 00000000082fdb6b
+0x000000000023f470:   0000000008840260 0000000000000063
+0x000000000023f480:   00000080ffffffff 000000000000000c
+0x000000000023f490:   000000000023f4f8 0000000000000000
+0x000000000023f4a0:   0000000000000006 ffffffffffffffff
+0x000000000023f4b0:   0000000cffffffff 00000000085a4e28
+0x000000000023f4c0:   0000000000000000 00000000081eaa1b
+0x000000000023f4d0:   0000000008840170 0000000000000001
+0x000000000023f4e0:   0000000000000006 ffffffffffffffff
+0x000000000023f4f0:   000000000023f5d0 000000000821096e
+0x000000000023f500:   0000000008840260 0000000000000063
+0x000000000023f510:   0000000000000063 000000000023f630
+0x000000000023f520:   0000000000000063 00000000082fd90d
+0x000000000023f530:   0000000000000063 0000000008840260 
+
+Instructions: (pc=0x000000000826ba36)
+0x000000000826ba16:   24 48 48 8b 6c 24 50 48 8b 74 24 58 48 83 c4 30
+0x000000000826ba26:   5f c3 cc cc cc cc cc cc cc cc 48 83 ec 28 ff d1
+0x000000000826ba36:   eb 00 48 83 c4 28 c3 cc cc cc 40 53 48 83 ec 20
+0x000000000826ba46:   b9 13 00 00 00 e8 b0 ce f7 ff 48 8b 15 d1 1b 55 
+
+
+Stack: [0x0000000000140000,0x0000000000240000],  sp=0x000000000023f440,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x26ba36]
+V  [jvm.dll+0x2fdb6b]
+V  [jvm.dll+0x2ff133]
+V  [jvm.dll+0x1eac48]
+V  [jvm.dll+0x21c0aa]
+V  [jvm.dll+0x1224b1]
+C  [phpstorm64.exe+0x445d]
+C  [phpstorm64.exe+0x5914]
+C  [phpstorm64.exe+0xeebc]
+C  [ntdll.dll+0x6b513]  call_thread_func+0xd3
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000004ef800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=37, stack(0x0000000000140000,0x0000000000240000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x0000000140000000 - 0x000000014014c000 	C:\Program Files\JetBrains\PhpStorm 2017.1.4\bin\phpstorm64.exe
+0x00007fdd1a2f0000 - 0x00007fdd1a5c6000 	C:\windows\system32\ntdll.dll
+0x000000007b820000 - 0x000000007bc7c000 	C:\windows\system32\KERNEL32.dll
+0x00007fdd18c90000 - 0x00007fdd19021000 	C:\windows\system32\user32.dll
+0x00007fdd18920000 - 0x00007fdd18c70000 	C:\windows\system32\gdi32.dll
+0x00007fdd18690000 - 0x00007fdd1890a000 	C:\windows\system32\advapi32.dll
+0x00007fdd18470000 - 0x00007fdd18683000 	C:\windows\system32\version.dll
+0x00007fdd18020000 - 0x00007fdd18469000 	C:\windows\system32\shell32.dll
+0x00007fdd17d80000 - 0x00007fdd18004000 	C:\windows\system32\shlwapi.dll
+0x00007fdd17a70000 - 0x00007fdd17d71000 	C:\windows\system32\comctl32.dll
+0x00007fdd16bb0000 - 0x00007fdd16e3e000 	C:\windows\system32\winex11.drv
+0x00007fdd14d90000 - 0x00007fdd14fc3000 	C:\windows\system32\uxtheme.dll
+0x00007fdd14a30000 - 0x00007fdd14d89000 	C:\windows\system32\ole32.dll
+0x00007fdd14780000 - 0x00007fdd14a02000 	C:\windows\system32\rpcrt4.dll
+0x0000000008000000 - 0x000000000883b000 	C:\Program Files\JetBrains\PhpStorm 2017.1.4\jre64\bin\server\jvm.dll
+0x00007fdd14530000 - 0x00007fdd1474a000 	C:\windows\system32\wsock32.dll
+0x00007fdd14300000 - 0x00007fdd1452d000 	C:\windows\system32\ws2_32.dll
+0x00007fdd140d0000 - 0x00007fdd142f3000 	C:\windows\system32\iphlpapi.dll
+0x00007fdd13e10000 - 0x00007fdd140cb000 	C:\windows\system32\winmm.dll
+0x00007fdd13be0000 - 0x00007fdd13e07000 	C:\windows\system32\msacm32.dll
+0x00007fdd139d0000 - 0x00007fdd13bda000 	C:\windows\system32\psapi.dll
+0x0000000079730000 - 0x0000000079802000 	C:\Program Files\JetBrains\PhpStorm 2017.1.4\jre64\bin\MSVCR100.dll
+0x0000000180000000 - 0x000000018000f000 	C:\Program Files\JetBrains\PhpStorm 2017.1.4\jre64\bin\verify.dll
+0x0000000000600000 - 0x0000000000629000 	C:\Program Files\JetBrains\PhpStorm 2017.1.4\jre64\bin\java.dll
+0x0000000000630000 - 0x0000000000646000 	C:\Program Files\JetBrains\PhpStorm 2017.1.4\jre64\bin\zip.dll
+0x00007fdd13760000 - 0x00007fdd139c7000 	C:\windows\system32\dbghelp.dll
+0x00007fdd134b0000 - 0x00007fdd13757000 	C:\windows\system32\msvcrt.dll
+
+VM Arguments:
+jvm_args: -Xms128m -Xmx750m -XX:ReservedCodeCacheSize=240m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Djb.vmOptionsFile=C:\Program Files\JetBrains\PhpStorm 2017.1.4\bin\phpstorm64.exe.vmoptions -Xbootclasspath/a:C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\boot.jar -Didea.platform.prefix=PhpStorm -Didea.jre.check=true -Didea.paths.selector=PhpStorm2017.1 -XX:ErrorFile=C:\users\ian-dot\java_error_in_phpstorm_%p.log -XX:HeapDumpPath=C:\users\ian-dot\java_error_in_phpstorm.hprof 
+java_command: <unknown>
+java_class_path (initial): C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\bootstrap.jar;C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\extensions.jar;C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\util.jar;C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\jdom.jar;C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\log4j.jar;C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\trove4j.jar;C:\Program Files\JetBrains\PhpStorm 2017.1.4\lib\jna.jar;C:\Program Files\JetBrains\PhpStorm 2017.1.4\jre64\lib\tools.jar
+Launcher Type: generic
+
+Environment Variables:
+PATH=C:\windows\system32;C:\windows;C:\windows\system32\wbem
+USERNAME=ian-dot
+SHELL=/bin/bash
+DISPLAY=:0
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 5.1 , 64 bit Build 2600 (5.1.2600.2180)
+
+CPU:total 4 
+
+Memory: 4k page, physical 8011116k(5278800k free), swap 16234856k(13502540k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.112-b21) for windows-amd64 JRE (1.8.0_112-release-736-b21), built on Apr 21 2017 14:18:47 by "builduser" with MS VC++ 10.0 (VS2010)
+
+time: Wed Apr 04 17:38:49 2018
+elapsed time: 3 seconds (0d 0h 0m 3s)
+
